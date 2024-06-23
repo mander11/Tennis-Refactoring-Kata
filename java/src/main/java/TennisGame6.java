@@ -66,21 +66,28 @@ public class TennisGame6 implements TennisGame {
             // regular score
             String regularScore;
 
-            regularScore = scoreTranslation(player1Score) + "-" + scoreTranslation(player2Score);
+            String score1 =  switch (player1Score)
+            {
+                case 0 -> "Love";
+                case 1 -> "Fifteen";
+                case 2 -> "Thirty";
+                default -> "Forty";
+            };
+
+            var score2 =  switch (player2Score)
+            {
+                case 0 -> "Love";
+                case 1 -> "Fifteen";
+                case 2 -> "Thirty";
+                default -> "Forty";
+            };
+
+            regularScore = score1 + "-" + score2;
 
             result = regularScore;
         }
 
         return result;
-    }
-
-    private String scoreTranslation(int playerScore) {
-        return switch (playerScore) {
-            case 0 -> "Love";
-            case 1 -> "Fifteen";
-            case 2 -> "Thirty";
-            default -> "Forty";
-        };
     }
 
     private boolean isTieScore() {
