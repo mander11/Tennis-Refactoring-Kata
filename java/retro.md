@@ -1,3 +1,39 @@
+# Retro #2
+
+Joss
+- 
+
+Matt
+- rusty on the Java syntax - limiting our ability to refactor
+- wondering about keeping the retro notes in the repo
+
+Nitsan
+- git score method is much nicer i think
+- it's already much better i think
+- this round... more lag, in terms of remote controlling through zoom
+  - it didn't feel as comfortable as the first round
+- joss was on a windows keyboard, so some of teh keyboard shortcuts didn't work
+  - joss had to workaround
+- right-click didn't work for nitsan
+  - several controlling problems
+  - those little things make a difference (in the aggregate)
+  - if you're gonna be a typist... but ... that's a limiting factor
+- enum
+  - kind of the same thing
+  - but using a different construct
+  - but... we might be surprised
+  - ... we might go this way, and discover another ting along teh way
+    - still think we should 
+    - ...
+    - feels alittle like the if else's... that we already had
+- refactoring
+  - felt less safe
+    - the steps... felt less safe
+  - less using the tool
+    - and more manual refactoring
+
+
+
 # Retro
 
 Nitsan
