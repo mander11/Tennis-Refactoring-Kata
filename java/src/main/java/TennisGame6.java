@@ -24,25 +24,7 @@ public class TennisGame6 implements TennisGame {
 
         if (isTieScore())
         {
-            // tie score
-            String tieScore;
-            switch (player1Score)
-            {
-                case 0:
-                    tieScore = "Love-All";
-                    break;
-                case 1:
-                    tieScore = "Fifteen-All";
-                    break;
-                case 2:
-                    tieScore = "Thirty-All";
-                    break;
-                default:
-                    tieScore = "Deuce";
-                    break;
-            }
-
-            result = tieScore;
+            result = tieScore();
         }
         else if (isEndGame())
         {
@@ -55,6 +37,26 @@ public class TennisGame6 implements TennisGame {
         }
 
         return result;
+    }
+
+    private String tieScore() {
+        String tieScore;
+        switch (player1Score)
+        {
+            case 0:
+                tieScore = "Love-All";
+                break;
+            case 1:
+                tieScore = "Fifteen-All";
+                break;
+            case 2:
+                tieScore = "Thirty-All";
+                break;
+            default:
+                tieScore = "Deuce";
+                break;
+        }
+        return tieScore;
     }
 
     private String endGameScore() {
