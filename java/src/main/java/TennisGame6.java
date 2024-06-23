@@ -44,7 +44,7 @@ public class TennisGame6 implements TennisGame {
 
             result = tieScore;
         }
-        else if (player1Score >= 4 || player2Score >= 4)
+        else if (areScroresAbove4())
         {
             // end-game score
             String endGameScore;
@@ -64,14 +64,14 @@ public class TennisGame6 implements TennisGame {
         else
         {
             // regular score
-            String regularScore;
-
-            regularScore = scoreTranslation(player1Score) + "-" + scoreTranslation(player2Score);
-
-            result = regularScore;
+            result = scoreTranslation(player1Score) + "-" + scoreTranslation(player2Score);
         }
 
         return result;
+    }
+
+    private boolean areScroresAbove4() {
+        return player1Score >= 4 || player2Score >= 4;
     }
 
     private String scoreTranslation(int player1Score1) {
