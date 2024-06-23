@@ -44,22 +44,9 @@ public class TennisGame6 implements TennisGame {
 
             result = tieScore;
         }
-        else if (areScroresAbove4())
+        else if (isEndGame())
         {
-            // end-game score
-            String endGameScore;
-
-            if (player1Score - player2Score == 1) {
-                endGameScore = "Advantage " + player1Name;
-            } else if (player1Score - player2Score == -1) {
-                endGameScore = "Advantage " + player2Name;
-            } else if (player1Score - player2Score >= 2) {
-                endGameScore = "Win for " + player1Name;
-            } else {
-                endGameScore = "Win for " + player2Name;
-            }
-
-            result = endGameScore;
+            result = endGameScore();
         }
         else
         {
@@ -68,6 +55,28 @@ public class TennisGame6 implements TennisGame {
         }
 
         return result;
+    }
+
+    private String endGameScore() {
+        String result;
+        String endGameScore;
+
+        if (player1Score - player2Score == 1) {
+            endGameScore = "Advantage " + player1Name;
+        } else if (player1Score - player2Score == -1) {
+            endGameScore = "Advantage " + player2Name;
+        } else if (player1Score - player2Score >= 2) {
+            endGameScore = "Win for " + player1Name;
+        } else {
+            endGameScore = "Win for " + player2Name;
+        }
+
+        result = endGameScore;
+        return result;
+    }
+
+    private boolean isEndGame() {
+        return areScroresAbove4();
     }
 
     private boolean areScroresAbove4() {
