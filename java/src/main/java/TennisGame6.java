@@ -22,7 +22,7 @@ public class TennisGame6 implements TennisGame {
     {
         String result;
 
-        if (player1Score == player2Score)
+        if (isTieScore())
         {
             // tie score
             String tieScore;
@@ -88,5 +88,9 @@ public class TennisGame6 implements TennisGame {
         }
 
         return result;
+    }
+
+    private boolean isTieScore() {
+        return player1Score == player2Score;
     }
 }
