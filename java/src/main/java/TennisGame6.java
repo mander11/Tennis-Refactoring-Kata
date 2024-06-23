@@ -20,23 +20,30 @@ public class TennisGame6 implements TennisGame {
 
     public String getScore()
     {
-        String result;
+        switch (scoreType())
+        {
+            case TIE: return tieScore();
+        }
 
+        if (isEndGame())
+        {
+            return endGameScore();
+        }
+
+        return regularScore();
+    }
+
+    private SCORE_TYPE scoreType() {
         if (isTieScore())
         {
-            result = tieScore();
-        }
-        else if (isEndGame())
-        {
-            result = endGameScore();
-        }
-        else
-        {
-            // regular score
-            result = scoreTranslation(player1Score) + "-" + scoreTranslation(player2Score);
+            return SCORE_TYPE.TIE;
         }
 
-        return result;
+        return SCORE_TYPE.REGULAR;
+    }
+
+    private String regularScore() {
+        return scoreTranslation(player1Score) + "-" + scoreTranslation(player2Score);
     }
 
     private String tieScore() {
