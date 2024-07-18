@@ -24,6 +24,7 @@ public class TennisGame6 implements TennisGame {
         {
             case TIE: return tieScore();
         }
+        
 
         if (isEndGame())
         {
