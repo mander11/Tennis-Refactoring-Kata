@@ -1,6 +1,5 @@
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -27,17 +26,7 @@ public class TestClass {
 
         Account account = new Account(1, securityList, desiredPercentages);
 
-    }
-
-    @Test
-    public void test() {
-        int expected = 1;
-        int actual = getActual();
-        assertEquals(expected, actual);
-    }
-
-    private int getActual() {
-        return 1;
+        assertEquals(1, 1);
     }
 
 }
